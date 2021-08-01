@@ -1,3 +1,6 @@
+#Attention!
+This is a fork from the customDCbot from the SC Network. The readme will change soon. Note that this fork is for customizing the bot for our own specific needs, it might not be useful to anyone else.
+
 # Custom-Bot
 
 Create your own discord bot - Fully customizable and with a lot of features. This bot is for advanced JS-Users, you should only
