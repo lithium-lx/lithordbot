@@ -3,10 +3,10 @@
 Note: This is a fork for customizing the bot for my specfic needs. This might not be useful for anyone else!
 
 ## Creator Credit
-This project is a fork of the [CustomDCbot](https://github.com/SCNetwork/CustomDCBot) by [SCDerox](https://github.com/SCDerox)
-They also have a web interface for creating your own custom Discord bot.
-Go check it out on their [website](https://partner.sc-netzwerk.de) (currently only german).
-If you want to support this project, *don't* donate to me, donate to the original creator [here](https://bunq.me/scderox)
+* This project is a fork of the [CustomDCbot](https://github.com/SCNetwork/CustomDCBot) by [SCDerox](https://github.com/SCDerox). \
+* They also have a web interface for creating your own custom Discord bot.
+* Go check it out on their [website](https://partner.sc-netzwerk.de) (currently only german).
+* If you want to support this project, *don't* donate to me, donate to the original creator [here](https://bunq.me/scderox).
 
 ## Please read the [license](LICENSE) if you use this bot. 
 We really love open-source. Please read the license and follow it.\
