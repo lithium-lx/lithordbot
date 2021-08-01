@@ -1,0 +1,2 @@
+- add a reload command
+- switch between configs via the args provided in the command line at statup
