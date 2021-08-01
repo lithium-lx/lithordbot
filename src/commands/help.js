@@ -26,8 +26,8 @@ module.exports.run = async function (client, msg) {
         }
     }
     helpEmbed.addField('\u200b', '\u200b');
-    // Play fair and do not remove this. Com'on its only one embed field. Thanks, love you <3
-    helpEmbed.addField('ℹ️ Bot-Info', 'This [Open-Source-Bot](https://github.com/SCNetwork/CustomDCBot) was developed by the [Contributors](https://github.com/SCNetwork/CustomDCBot/graphs/contributors) and the [SC Network](https://sc-network.net)-Team.');
+    // Play fair and do not remove this. Com'on its only one embed field. Thanks, love you <3oped 
+    helpEmbed.addField('ℹ️ Bot-Info', '[Lithord](https://github.com/lithium-lx/lithordbot) is a fork of this [Open-Source-Bot](https://github.com/SCNetwork/CustomDCBot) that was developed by the [Contributors](https://github.com/SCNetwork/CustomDCBot/graphs/contributors) and the [SC Network](https://sc-network.net)-Team.');
     await msg.channel.send(helpEmbed);
 };
 
