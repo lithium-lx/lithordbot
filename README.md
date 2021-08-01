@@ -1,4 +1,5 @@
-#Attention!
+# Attention!
+
 This is a fork from the customDCbot from the SC Network. The readme will change soon. Note that this fork is for customizing the bot for our own specific needs, it might not be useful to anyone else.
 
 # Custom-Bot
