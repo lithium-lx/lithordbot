@@ -1,16 +1,12 @@
-# Attention!
+# The Lithordbot
 
-This is a fork from the customDCbot from the SC Network. The readme will change soon. Note that this fork is for customizing the bot for our own specific needs, it might not be useful to anyone else.
+Note: This is a fork for customizing the bot for my specfic needs. This might not be useful for anyone else!
 
-# Custom-Bot
-
-Create your own discord bot - Fully customizable and with a lot of features. This bot is for advanced JS-Users, you should only
-use it if you have some experience with Javascript, discord.js and JSON files. 
-
----
-
-## Get your own Custom-Bot completely free and with a modern webinterface!
-Go check it out on our [website](https://partner.sc-netzwerk.de) (currently only german).
+## Creator Credit
+This project is a fork of the [CustomDCbot](https://github.com/SCNetwork/CustomDCBot) by [SCDerox](https://github.com/SCDerox)
+They also have a web interface for creating your own custom Discord bot.
+Go check it out on their [website](https://partner.sc-netzwerk.de) (currently only german).
+If you want to support this project, *don't* donate to me, donate to the original creator [here](https://bunq.me/scderox)
 
 ## Please read the [license](LICENSE) if you use this bot. 
 We really love open-source. Please read the license and follow it.\
@@ -19,9 +15,6 @@ In short words: You have to
 * State changes (*every* change to the source code must be documented and published)\
 
 Please read the full [license](LICENSE). This is not legal advice. 
-
-## Please read this issue before continuing.
-This repo does not get any new modules currently. [Learn more](https://github.com/SCNetwork/CustomDCBot/issues/13).
 
 ### Table of contents
 
@@ -128,6 +121,5 @@ An example config file should include the following things:
   
 If you plan to use the [ready](https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=e-ready) event of discord.js to run some action when the client is ready, and you need to load some configuration-files you should use the `botReady`-event instead.
 
-© Simon Csaba, 2020-2021
-
-Love ya <3
+Modified Version: © Luka Röhrig (based on the original by Simon Csaba)
+Original: © Simon Csaba, 2020-2021
