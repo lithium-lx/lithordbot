@@ -9,6 +9,7 @@ The TODO file should give you an Idea of what I'm working on.
 * They also have a web interface for creating your own custom Discord bot:
 * Go check it out on their [website](https://partner.sc-netzwerk.de) (currently only german).
 * If you want to support this project, *don't* donate to me, donate to the original creator(s) [here](https://bunq.me/scderox).
+* (They figured out the hard stuff, not me)
 
 ## Please read the [license](LICENSE) if you use this bot. 
 We really love open-source. Please read the license and follow it.\
