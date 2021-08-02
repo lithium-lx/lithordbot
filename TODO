@@ -1,1 +1,8 @@
 - add a reload command
+- a debug mode, tied in with the CLi
+- expanding the CLI to be acuatlly useful (writing a real command handler) and with the following capabilities:
+    - reloading commands
+    - (re-)loading modules
+    - giving commands a way to interact with the CLI (should only be active in a debug mode)
+- Making new modules user-installable (probably through a nodejs terminal tool (npm run-script add-module))
+- (far future) make the bot aware of other instances of itself (on other servers) and interact with them (data sharing, etc.)
