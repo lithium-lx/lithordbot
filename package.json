@@ -1,20 +1,21 @@
 {
-  "name": "customdcbot",
-  "version": "1.0.0",
-  "description": "Create your own discord bot - Fully customizable and with a lot of features",
+  "name": "lithord",
+  "version": "0.1.0",
+  "description": "Fork of the CustomDCBot from SCDerox",
   "main": "main.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/SCNetwork/CustomDCBot.git"
+    "url": "https://github.com/lithium-lx/lithordbot.git"
   },
   "scripts": {
     "start": "node main.js",
     "test": "node main.js",
     "generate-config": "node generate-config.js"
   },
-  "author": "SC Network Team",
+  "author": "ReMod Team",
   "contributors": [
-    "SCDerox <scderox@sc-network.net>"
+    "SCDerox <scderox@sc-network.net>",
+    "Lithium <lx.staticservices@gmail.com>"
   ],
   "license": "GPL-3.0-or-later",
   "dependencies": {
