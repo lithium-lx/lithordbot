@@ -9,8 +9,6 @@ let config;
 let confDir = `${__dirname}/config`;
 let dataDir = `${__dirname}/data`;
 const args = process.argv.slice(2);
-let scnxSetup = false; // If enabled some other (closed-sourced) files get imported and executed
-if (process.argv.includes('--scnx-enabled')) scnxSetup = true;
 if (args[0] === '--help' || args[0] === '-h') {
     console.log('node main.js <configDir> <dataDir>');
     process.exit();
@@ -53,6 +51,15 @@ const db = new Sequelize({
     logging: false
 });
 
+//Making lithord interactive
+const rl = require('readline').createInterface({
+    input: process.stdin,
+    output: process.stdout,
+    prompt: 'lithord> '
+})
+
+rl.prompt();
+
 // Starting bot
 db.authenticate().then(async () => {
     await loadModules();
@@ -65,10 +72,25 @@ db.authenticate().then(async () => {
     client.models = models;
     await checkAllConfigs();
     client.strings = require(`${confDir}/strings.json`);
-    if (scnxSetup) await require('./src/functions/scnx-integration').init(client);
     client.emit('botReady');
     client.botReadyAt = new Date();
     console.log('[BOT] The bot initiated successfully and is now listening to commands.')
+});
+
+//CLI-Stuff
+rl.on('line', (line) => {
+    switch (line.trim()) {
+        case 'hello':
+            console.log('world!');
+            break;
+        default:
+            console.log(`Say what? I might have heard '${line.trim()}'`);
+            break;
+    }
+    rl.prompt();
+}).on('close', () => {
+    console.log('Have a great day!');
+    process.exit(0);
 });
 
 // Checking every (module AND bot) config file.
