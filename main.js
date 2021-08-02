@@ -9,6 +9,8 @@ let config;
 let confDir = `${__dirname}/config`;
 let dataDir = `${__dirname}/data`;
 const args = process.argv.slice(2);
+let scnxSetup = false; // If enabled some other (closed-sourced) files get imported and executed
+if (process.argv.includes('--scnx-enabled')) scnxSetup = true;
 if (args[0] === '--help' || args[0] === '-h') {
     console.log('node main.js <configDir> <dataDir>');
     process.exit();
@@ -44,6 +46,8 @@ client.config = config;
 client.configDir = confDir;
 client.dataDir = dataDir;
 
+const botName = config['botName'];
+
 // Connecting to Database
 const db = new Sequelize({
     dialect: 'sqlite',
@@ -55,7 +59,7 @@ const db = new Sequelize({
 const rl = require('readline').createInterface({
     input: process.stdin,
     output: process.stdout,
-    prompt: 'lithord> '
+    prompt: `${botName} >`
 })
 
 rl.prompt();
@@ -72,12 +76,14 @@ db.authenticate().then(async () => {
     client.models = models;
     await checkAllConfigs();
     client.strings = require(`${confDir}/strings.json`);
+    if (scnxSetup) await require('./src/functions/scnx-integration').init(client);
+    await botNameroutine();
     client.emit('botReady');
     client.botReadyAt = new Date();
     console.log('[BOT] The bot initiated successfully and is now listening to commands.')
 });
 
-//CLI-Stuff
+//CLI
 rl.on('line', (line) => {
     switch (line.trim()) {
         case 'hello':
@@ -233,6 +239,14 @@ async function loadModule(dir, file, moduleName) {
             await loadModules(`${dir}/${file}`);
         }
     });
+}
+
+//Change the bot's nickname
+async function botNameroutine() {
+    return new Promise(async resolve => {
+        //Changing the nickname of the bot in the guild to a specified name in the config
+        resolve();
+    })
 }
 
 module.exports.models = models;

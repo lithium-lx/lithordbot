@@ -29,6 +29,12 @@
       "default": "You can change this in your config.json btw",
       "type": "string",
       "description": "This will show up in Discord as \"Playing <YourValue>\""
+    },
+    {
+      "field_name": "botName",
+      "default": "bot",
+      "type": "string",
+      "description": "This is the nickname that the bot will give themselves"
     }
   ]
 }
