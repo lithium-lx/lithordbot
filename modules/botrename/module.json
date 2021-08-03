@@ -1,0 +1,9 @@
+{
+    "name": "botrename",
+    "description": "Simple automatic bot renaming tool",
+    "author": {
+      "name": "Lithium",
+      "link": "https://github.com/lithium-lx/"
+    },
+    "on-load-event": "/botrename.js"
+}

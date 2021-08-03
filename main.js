@@ -46,8 +46,6 @@ client.config = config;
 client.configDir = confDir;
 client.dataDir = dataDir;
 
-const botName = config['botName'];
-
 // Connecting to Database
 const db = new Sequelize({
     dialect: 'sqlite',
@@ -55,14 +53,12 @@ const db = new Sequelize({
     logging: false
 });
 
-//Making lithord interactive
+//Making the bot terminal interactive
 const rl = require('readline').createInterface({
     input: process.stdin,
     output: process.stdout,
-    prompt: `${botName} >`
+    prompt: `${config['botName']}> `
 })
-
-rl.prompt();
 
 // Starting bot
 db.authenticate().then(async () => {
@@ -77,25 +73,28 @@ db.authenticate().then(async () => {
     await checkAllConfigs();
     client.strings = require(`${confDir}/strings.json`);
     if (scnxSetup) await require('./src/functions/scnx-integration').init(client);
-    await botNameroutine();
     client.emit('botReady');
     client.botReadyAt = new Date();
     console.log('[BOT] The bot initiated successfully and is now listening to commands.')
+    rl.prompt();
 });
 
 //CLI
 rl.on('line', (line) => {
     switch (line.trim()) {
-        case 'hello':
-            console.log('world!');
+        case 'shutdown':
+            client.destroy();
+            console.log('\nClient destroyed, exiting process. Bye Bye!')
+            process.exit(0);
             break;
         default:
-            console.log(`Say what? I might have heard '${line.trim()}'`);
+            console.log(`'${line.trim()}' isn't a valid command`);
             break;
     }
     rl.prompt();
 }).on('close', () => {
-    console.log('Have a great day!');
+    client.destroy();
+    console.log('\nClient destroyed, exiting process. Bye Bye!');
     process.exit(0);
 });
 
@@ -239,14 +238,6 @@ async function loadModule(dir, file, moduleName) {
             await loadModules(`${dir}/${file}`);
         }
     });
-}
-
-//Change the bot's nickname
-async function botNameroutine() {
-    return new Promise(async resolve => {
-        //Changing the nickname of the bot in the guild to a specified name in the config
-        resolve();
-    })
 }
 
 module.exports.models = models;
