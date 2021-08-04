@@ -4,5 +4,10 @@
     - reloading commands
     - (re-)loading modules
     - giving commands a way to interact with the CLI (should only be active in a debug mode)
+        - msgirage (Faking messages by creating a message object and sending it through /src/events/message.js)
+        - Monitor commands being executed
 - Making new modules user-installable (probably through a nodejs terminal tool (npm run-script add-module))
 - (far future) make the bot aware of other instances of itself (on other servers) and interact with them (data sharing, etc.)
+- expand /src/events/message.js
+    - More advanced permission system (through /src/functions/perms.js OR
+    /modules/advanced_perms with permissions.json giving the perms handler: msg(member, channel, roles, timestamp))
