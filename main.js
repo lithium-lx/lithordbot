@@ -53,13 +53,6 @@ const db = new Sequelize({
     logging: false
 });
 
-//Making the bot terminal interactive
-const rl = require('readline').createInterface({
-    input: process.stdin,
-    output: process.stdout,
-    prompt: `${config['botName']}> `
-})
-
 // Starting bot
 db.authenticate().then(async () => {
     await loadModules();
@@ -76,26 +69,7 @@ db.authenticate().then(async () => {
     client.emit('botReady');
     client.botReadyAt = new Date();
     console.log('[BOT] The bot initiated successfully and is now listening to commands.')
-    rl.prompt();
-});
-
-//CLI
-rl.on('line', (line) => {
-    switch (line.trim()) {
-        case 'shutdown':
-            client.destroy();
-            console.log('\nClient destroyed, exiting process. Bye Bye!')
-            process.exit(0);
-            break;
-        default:
-            console.log(`'${line.trim()}' isn't a valid command`);
-            break;
-    }
-    rl.prompt();
-}).on('close', () => {
-    client.destroy();
-    console.log('\nClient destroyed, exiting process. Bye Bye!');
-    process.exit(0);
+    client.emit('cliReady');
 });
 
 // Checking every (module AND bot) config file.
