@@ -1,8 +1,7 @@
 # The Lithordbot
 
 Note: This is a fork for customizing the bot for my specfic needs. This might not be useful for anyone else!
-I am in the early stage of this project, a lot of things can change in the future!.
-The TODO file should give you an Idea of what I'm working on.
+Currently, I focus on creating modules that help me in the process of debugging modules.
 
 ## Creator Credit
 * This project is a fork of the [CustomDCbot](https://github.com/SCNetwork/CustomDCBot) by the [SCNetwork](https://github.com/SCNetwork). \
