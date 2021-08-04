@@ -1,0 +1,10 @@
+{
+    "name": "CLI",
+    "description": "CLI for managing the bot outside chat",
+    "author": {
+      "name": "Lithium",
+      "link": "https://github.com/lithium-lx/"
+    },
+    "on-load-event": "/cli.js",
+    "events-dir": "/core-commands"
+}
