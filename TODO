@@ -11,3 +11,5 @@
 - expand /src/events/message.js
     - More advanced permission system (through /src/functions/perms.js OR
     /modules/advanced_perms with permissions.json giving the perms handler: msg(member, channel, roles, timestamp))
+- RSS news feed via a module
+- Little minigames, etc.
