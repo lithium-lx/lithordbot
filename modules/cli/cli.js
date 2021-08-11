@@ -27,6 +27,12 @@ module.exports.onLoad = async function () {
                 client.emit(eevent);
                 console.log(`Emitted ${eevent}`);
                 break;
+            case 'eval':
+                try {
+                    eval(client.tline.slice(client.tline.indexOf("#")+1));
+                } catch (error) {
+                    console.error(error);
+                }
             default:
                 console.log(`'${cmd}' isn't a valid command`);
                 break;
