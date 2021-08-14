@@ -1,0 +1,38 @@
+{
+    "antiquity": [
+        {
+            "name": "[Draco of Athens](https://en.wikipedia.org/wiki/Draco_of_Athens)",
+            "dod": "c. 620 BC",
+            "det": "Draco, an Athenian lawmaker, was reportedly smothered to death by gifts of cloaks and hats showered upon him by appreciative citizens at a theatre on [Aegina](https://en.wikipedia.org/wiki/Aegina).",
+            "img": false
+        },
+        {
+            "name": "[Charondas](https://en.wikipedia.org/wiki/Charondas)",
+            "dod": "Late 7th to early 5th century BC",
+            "det": "Charondas was a Greek lawgiver from [Sicily](https://en.wikipedia.org/wiki/Sicily). According to [Diodorus Siculus](https://en.wikipedia.org/wiki/Diodorus_Siculus), he issued a law that anyone who brought weapons into the [Assembly](https://en.wikipedia.org/wiki/Ecclesia_(ancient_Athens) must be put to death. One day, he arrived at the Assembly seeking help to defeat some brigands in the countryside but with a knife still attached to his belt. In order to uphold his own law, he committed suicide.",
+            "img": true,
+            "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Illustration_of_the_death_of_Charondas_from_1787.jpg/100px-Illustration_of_the_death_of_Charondas_from_1787.jpg"
+        },
+        {
+            "name": "[Arrhichion](https://en.wikipedia.org/wiki/Ancient_Olympic_Games) of [Phigalia](https://en.wikipedia.org/wiki/Phigalia)",
+            "dod": "564 BC",
+            "det": "Arrhichion of Phigalia, a Greek [pankratiast](https://en.wikipedia.org/wiki/Pankration), caused his own death during the [Olympic](https://en.wikipedia.org/wiki/Ancient_Olympic_Games) finals. Held by his unidentified opponent in a stranglehold and unable to free himself, Arrichion kicked his opponent, causing him so much pain from a foot/ankle injury that the opponent made the sign of defeat to the umpires, but at the same time broke Arrichion's neck. Since the opponent had conceded defeat, Arrichion was proclaimed the victor posthumously.",
+            "img": true,
+            "src": "https://en.wikipedia.org/wiki/File:Pankratiasten_in_fight_greek_statue_2_century_bC.jpg"
+        },
+        {
+            "name": "[Sisamnes](https://en.wikipedia.org/wiki/Sisamnes)",
+            "dod": "c. 525 BC",
+            "det": "",
+            "img": true,
+            "src": "https://en.wikipedia.org/wiki/File:Gerard_David_-_The_Judgment_of_Cambyses,_panel_2_-_The_shedding_of_the_corrupt_judge_Sisamnes.jpg"
+        },
+        {
+            "name": "placeholder",
+            "dod": "0000",
+            "det": "unusual",
+            "img": false,
+            "src": ""
+        }       
+    ]
+}

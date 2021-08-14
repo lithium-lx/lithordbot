@@ -1,0 +1,9 @@
+{
+  "name": "Unusual Deaths",
+  "author": {
+    "name": "Lithium",
+    "link": "https://github.com/lithium-lx"
+  },
+  "description": "List of unusual deaths from Wikipedia",
+  "commands-dir": "/commands"
+}
